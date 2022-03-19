@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="." method="post">
+    {% csrf_token %}
+    {{ form }}
+   <input type="submit" value="Submit">
+
+    <a class="btn btn-primary" href="/login/">Log in</a>
+    <a class="btn btn-primary" href="/">Back</a>
+</body>
+</html>

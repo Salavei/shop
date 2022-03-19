@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NATURAL</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div id="root">
+    <div class="App">
+        <header>
+            <div class="header_wrapper">
+                <div class="header_container">
+                    <div class="header_logo"><h2>Sphere</h2></div>
+                    <a href="/login/">
+                        <button class="header_button">Вход</button>
+                    </a></div>
+            </div>
+        </header>
+        <main>
+            <div class="main_wrapper">
+                <div class="main_container">
+                    <div class="main_img"></div>
+                    <div class="main_layer"><h1>Sphere</h1>
+                        <p>Экологичные свечи с необычными ароматами для твоего интерьера</p>
+                        <div class="main_customize"><p>Кастомизировать</p>
+                            <div class="arrow"></div>
+                            <div class="range" onclick="window.location='/castom/';"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% for prod in product %}
+        <section class="ContainerCandel_1">
+
+
+            <div class="textBlock" style="width: 293px;"><a>{{prod.flavor}}</a>
+                <p><span>Состав:</span> {{prod.structure}}</p>
+                <p><span>Объем:</span> {{prod.volume}} мл</p>
+                <p><span>Цена: {{prod.price}} BYN</span></p></p>
+                <form action="" method="post">{% csrf_token %}
+                <button class="btn btn-primary" name="{{prod.id}}" value="{{prod.price}}"> Купить </button>
+                    </form>
+<!--                <a class="btn btn-primary" data-value="{{prod.id}}" href="">Купить</a>-->
+            </div>
+            <div class="ContainerPictureCandle">
+                <div class="Sqare"><img src="{{prod.img.url }}" width="450" height="450" style="margin: 40px 40px;">
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+
+
+        <footer>
+            <div style="margin-right: 28px;"><span class="GetCloserTo">Get closer to</span>
+                <p class="FollowOurInstagram">Follow our Instagram</p></div>
+            <div><span class="Sphere">Sphere</span>
+                <p class="candle" style="text-align: end;">candle</p></div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
