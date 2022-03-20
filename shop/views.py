@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Product, User
+from .models import Product, User, Order
 from .forms import Registry, OrderForm
 from cloudipsp import Api, Checkout
 import re
@@ -25,6 +25,13 @@ def main_page(request):
         return redirect(url)
     product = Product.objects.all()
     return render(request, 'shop/index.html', {'product': product})
+
+
+def profile(request):
+    if request.user.is_authenticated:
+        qs = Order.objects.filter(user_id=request.user.id)
+        return render(request, 'shop/profile.html', {"user": request.user, "orders":qs})
+    return redirect('/login/')
 
 
 def register_page(request):
@@ -65,7 +72,7 @@ def login_page(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('/')
+                return redirect('/profile/')
             else:
                 messages.info(request, 'Username or Password incorect')
                 return render(request, 'shop/test.html', {})

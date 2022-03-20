@@ -1,8 +1,6 @@
 from django.db import models
-
-from django.db import models
-from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.models import User
+
 
 class UUser(User):
     phone = models.CharField(max_length=12, unique=True, null=False)
@@ -31,18 +29,18 @@ class Order(models.Model):
         (2, '100'),
     )
     STATUS_CHOICES = (
-        (1, 'In processing'),
-        (2, 'sent'),
+        ('In processing', 1),
+        ('sent', 2),
     )
     candle_t = models.PositiveIntegerField(choices=TYPE_CHOICES)
     candle_color = models.PositiveIntegerField(choices=COLOR_CHOICES)
     candle_flavor = models.PositiveIntegerField(choices=FLAVOR_CHOICES)
     candle_volume = models.PositiveIntegerField(choices=VOLUME_CHOICES)
-    status = models.PositiveIntegerField(choices=STATUS_CHOICES, default='1', db_index=True)
+    status = models.CharField(max_length=255, choices=STATUS_CHOICES, default='1', db_index=True)
     created_order = models.DateTimeField(auto_now_add=True, db_index=True)
 
     def __str__(self):
-        return f'{self.user_id} статус отправки : {self.status} (1 - In processing , 2 - sent )'
+        return f'{self.user_id} - формирование заказа : {self.status}'
 
     class Meta:
         ordering = ('status', 'created_order')
@@ -58,7 +56,6 @@ class Product(models.Model):
     volume = models.PositiveIntegerField(choices=VOLUME_CHOICES)
     structure = models.CharField(max_length=256)
     flavor = models.CharField(max_length=256)
-    description = models.TextField(max_length=500, null=True, blank=True)
     img = models.ImageField(upload_to='static', null=True, blank=True)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     count = models.IntegerField(null=True, db_index=True)

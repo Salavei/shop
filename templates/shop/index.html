@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NATURAL</title>
     <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
     <meta charset="utf-8">
     <link rel="icon" href="/favicon.ico">
@@ -14,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&amp;display=swap" rel="stylesheet">
-
+    <title>Sphere</title>
 </head>
 <body>
 {% if request.user.is_authenticated %}
@@ -24,9 +23,9 @@
             <div class="header_wrapper">
                 <div class="header_container">
                     <div class="header_logo"><h2>Sphere</h2></div>
-                        <button class="header_button" onclick="window.location='/logout/';">Выход</button>
+                        <button class="header_button" onclick="window.location='/profile/';">Профиль</button>
                     </div>
-            </div>
+                </div>
         </header>
         <main>
             <div class="main_wrapper">

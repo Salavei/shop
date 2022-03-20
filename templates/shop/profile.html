@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&amp;display=swap" rel="stylesheet">
+    <title>Profile</title>
+</head>
+
+<body>
+
+<body>
+<div id="root">
+    <div class="App">
+        <div class="borderContainer">
+        </a>
+            <header class="registrHeader">
+                <div><span>Sphere</span>
+                    <p>candle</p>
+                </div>
+                <img src="{% static 'peaple.svg' %}">
+
+            </header>
+            <div class="greyLine"></div>
+
+
+            <div class="header_container">
+                        <button class="aheader_button" onclick="window.location='/logout/';">Выход</button>
+                </div>
+            <div class="registrForm">
+        {% for order in orders %}
+                <h4>Формирование заказа : {{ order.status}}</h4>
+
+                <h4>Адрес доставки : </h4>
+        {% endfor %}
+    </div>
+                    </div>
+
+
+
+            <a href="/">
+            <div class="backButton"><img
+                    src="{% static 'left.svg' %}"><span>назад</span>
+            </div>
+            </a>
+
+
+
+<!--            <form class="registrForm"  action="." method="post" >{% csrf_token %}<h1>Регистрация</h1>-->
+<!--                <div>-->
+<!--                    <input class="aaaaaaa" placeholder="Username" name="username" value="">-->
+
+<!--                </div>-->
+<!--                <input class="aaaaaaa" name="phone" placeholder="Телефон" value>-->
+<!--                <input class="aaaaaaa" type="email"  name="email" class="eemail" value placeholder="Email">-->
+<!--                <input class="aaaaaaa" type="password" name="password1" class="password" value placeholder="Пароль">-->
+<!--                    <span class="ain_customize"-->
+<!--                        style="align-self: center; margin-right: 30px;">Зарегистрироваться</span>-->
+
+<!--                <img class="ange"-->
+<!--                        src="{% static 'right.svg' %}" style="margin-right: -30px;">-->
+<!--                <input type="image" name="submit" src="{% static 'circle.svg' %}"  border='0' alt="Submit" class="rrow"/>-->
+
+<!--                {% for message in messages %}-->
+<!--                <a id="messages">{{ message }}</a>-->
+<!--                {% endfor %}-->
+
+<!--        </form>-->
+
+
+
+
+    <footer>
+        <div style="margin-right: 28px;"><span class="GetCloserTo">Get closer to</span>
+            <p class="FollowOurInstagram">Follow our Instagram</p></div>
+        <div><span class="Sphere">Sphere</span>
+            <p class="candle" style="text-align: end;">candle</p></div>
+    </footer>
+        </div>
+</div>
+</div>
+</body>
+</html>
