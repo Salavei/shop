@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect
 from .models import Product, User
-from .forms import Registry, LogIn, OrderForm
-from django.http import HttpResponseRedirect
-
+from .forms import Registry, OrderForm
 from cloudipsp import Api, Checkout
 import re
 from collections import OrderedDict
+from .forms import CreateUserForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+
+
 def main_page(request):
     if request.method == 'POST':
         search_price = []
@@ -25,31 +28,49 @@ def main_page(request):
 
 
 def register_page(request):
-    if request.method == 'POST':
-        form = Registry(request.POST)
-        if form.is_valid():
-            try:
-                print(User.objects.get(email=request.POST.get('email')))
-                print('Такого аккаунт уже есть!')
-            except User.DoesNotExist:
-                print('DoesNotExist')
-                User.objects.create(name=request.POST.get('name'), phone=request.POST.get('phone'),
-                                    email=request.POST.get('email'), password=request.POST.get('password'))
-                return redirect('/')
-    return render(request, 'shop/test_registry.html', {})
+    if request.user.is_authenticated:
+        return redirect('/')
+    else:
+        if request.method == 'POST':
+            qs = User.objects.filter(username=request.POST.get('username'))
+            if qs.exists():
+                messages.info(request, 'Account already exists')
+                return render(request, 'shop/test_registry.html', {})
+            else:
+                # print(User.objects.filter(username=request.POST.get('username')))
+                form = CreateUserForm(request.POST)
+                if form.is_valid():
+                    form.save()
+                    user = form.cleaned_data.get('username')
+                    messages.success(request, 'Account was created ' + user)
+                    return redirect('/login/')
+                else:
+                    messages.info(request, 'Form not valid')
+                    return render(request, 'shop/test_registry.html', {})
+        return render(request, 'shop/test_registry.html', {})
 
+
+def logout_user(request):
+    logout(request)
+    return redirect('/login/')
 
 
 def login_page(request):
-    print(request, 'awdddawdwdawdaw')
-    print('request', request.POST)
-    if request.method == 'POST':
-        print('request', request.POST)
-        email = request.POST['email']
-        password = request.POST['password']
-        return render(request, 'shop/test.html')
+    if request.user.is_authenticated:
+        return redirect('/')
     else:
-         return render(request, 'shop/test.html')
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('/')
+            else:
+                messages.info(request, 'Username or Password incorect')
+                return render(request, 'shop/test.html', {})
+
+        return render(request, 'shop/test.html', {'request': request})
 
 
 def catsom_page(request):
@@ -57,8 +78,7 @@ def catsom_page(request):
         form = OrderForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            print(cd)
-            return HttpResponseRedirect('/')
+            return redirect('/')
     else:
         form = OrderForm()
     return render(request, 'shop/castom.html', {'form': form})

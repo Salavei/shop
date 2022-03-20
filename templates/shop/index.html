@@ -17,9 +17,62 @@
 
 </head>
 <body>
-
-
+{% if request.user.is_authenticated %}
 <div id="root">
+    <div class="App">
+        <header>
+            <div class="header_wrapper">
+                <div class="header_container">
+                    <div class="header_logo"><h2>Sphere</h2></div>
+                        <button class="header_button" onclick="window.location='/logout/';">Выход</button>
+                    </div>
+            </div>
+        </header>
+        <main>
+            <div class="main_wrapper">
+                <div class="main_container">
+                    <div class="main_img"></div>
+                    <div class="main_layer"><h1>Sphere</h1>
+                        <p>Экологичные свечи с необычными ароматами для твоего интерьера</p>
+                        <div class="main_customize"><p>Кастомизировать</p>
+                            <div class="arrow"></div>
+                            <div class="range" onclick="window.location='/castom/';"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {% for prod in product %}
+
+
+
+        <section class="ContainerCandel_1">
+            <div class="textBlock" style="width: 293px;"><a>{{prod.flavor}}</a>
+                <p><span>Состав:</span> {{prod.structure}}</p>
+                <p><span>Объем:</span> {{prod.volume}} мл</p>
+                <p><span>Цена: {{prod.price}} BYN</span></p></p>
+                <form action="" method="post">{% csrf_token %}
+                    <button class="btn btn-primary" name="{{prod.id}}" value="{{prod.price}}"> Купить </button>
+
+                    </form>
+<!--                <a class="btn btn-primary" data-value="{{prod.id}}" href="">Купить</a>-->
+            </div>
+            <div class="ContainerPictureCandle">
+                <div class="Sqare"><img src="{{prod.img.url }}" width="450" height="450" style="margin: 40px 40px;">
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+
+
+
+
+
+
+
+        {% else %}
+        <div id="root">
     <div class="App">
         <header>
             <div class="header_wrapper">
@@ -38,13 +91,15 @@
                         <p>Экологичные свечи с необычными ароматами для твоего интерьера</p>
                         <div class="main_customize"><p>Кастомизировать</p>
                             <div class="arrow"></div>
-                            <div class="range" onclick="window.location='/castom/';"></div>
+                            <div class="range" onclick="window.location='/login/';"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+
         {% for prod in product %}
+
         <section class="ContainerCandel_1">
 
 
@@ -52,10 +107,7 @@
                 <p><span>Состав:</span> {{prod.structure}}</p>
                 <p><span>Объем:</span> {{prod.volume}} мл</p>
                 <p><span>Цена: {{prod.price}} BYN</span></p></p>
-                <form action="" method="post">{% csrf_token %}
-                <button class="btn btn-primary" name="{{prod.id}}" value="{{prod.price}}"> Купить </button>
-                    </form>
-<!--                <a class="btn btn-primary" data-value="{{prod.id}}" href="">Купить</a>-->
+                    <button class="btn btn-primary" onclick="window.location='/login/'"> Купить </button>
             </div>
             <div class="ContainerPictureCandle">
                 <div class="Sqare"><img src="{{prod.img.url }}" width="450" height="450" style="margin: 40px 40px;">
@@ -63,6 +115,7 @@
             </div>
         </section>
         {% endfor %}
+        {% endif %}
 
 
         <footer>

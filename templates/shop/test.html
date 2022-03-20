@@ -30,8 +30,8 @@
          <div style="text-align: -webkit-center;">
         <form class='formSignIn'  action="." method="post">{% csrf_token %}
             <h1>Вход</h1>
-            <p>Email</p>
-            <input type="email" class="email" name="email" value>
+            <p>username</p>
+            <input  class="email" name="username" value>
             <p>Пароль</p>
             <input type="password" class="password" name="password" value>
             <div class="aBox">
@@ -51,7 +51,11 @@
 
 
             <a class="btn btn-primary" href="../register/">Регистрация</a>
+            {% for message in messages %}
+                <a id="messages">{{ message }}</a>
+                {% endfor %}
         </form>
+
 
  </div>
             </div>

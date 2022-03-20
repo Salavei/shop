@@ -1,5 +1,20 @@
 from django import forms
-from .models import Order, User
+from .models import Order, UUser
+from django.contrib.auth.forms import UserCreationForm
+# from django.contrib.auth.models import User
+
+class CreateUserForm(UserCreationForm):
+    class Meta:
+        model = UUser
+        fields = ['username', 'email', 'phone', 'password1']
+
+
+    def __init__(self, *args, **kwargs):
+        super(UserCreationForm, self).__init__(*args, **kwargs)
+        del self.fields['password2']
+        self.fields['password1'].help_text = None
+        self.fields['username'].help_text = None
+
 
 
 class Registry(forms.Form):

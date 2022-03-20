@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Order, User, Product
-
+from .models import Order, Product, UUser
 admin.site.site_header = 'Админ раздел'
 
 
@@ -9,9 +8,9 @@ class OrderAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(User)
+@admin.register(UUser)
 class UserAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('phone', 'username', 'email')
 
 
 @admin.register(Product)

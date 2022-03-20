@@ -1,19 +1,11 @@
 from django.db import models
 
+from django.db import models
+from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User
 
-class User(models.Model):
-    name = models.CharField(max_length=255, null=False)
-    # без учета +
+class UUser(User):
     phone = models.CharField(max_length=12, unique=True, null=False)
-    email = models.EmailField(max_length=255, unique=True, null=False)
-    password = models.CharField(max_length=255, null=False)
-
-    def __str__(self):
-        return self.email
-
-    class Meta:
-        verbose_name = 'Клиент'
-        verbose_name_plural = 'Клиенты'
 
 
 class Order(models.Model):

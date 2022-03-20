@@ -22,7 +22,7 @@ code {
 .formSignIn {
     height: 65vh;
     width: 272px;
-    margin-top: 140px;
+    margin-top: 19px;
 }
 
 .formSignIn p {
@@ -553,6 +553,12 @@ main {
     padding: 30px;
 }
 
+#messages {
+    color: #a03333;
+    font-size: 15px;
+    padding: 58px 47px 92px 53px;
+}
+
 .explore_imgContainer {
     border: 0.5px solid #9EA0A0;
     box-sizing: border-box;
@@ -563,7 +569,7 @@ main {
 .explore_img {
     width: 408px;
     height: 380px;
-    background-image: url('{% static '21.png' %}');
+    background-image: url('{% static ' 21.png ' %}');
     position: relative;
 }
 
@@ -658,47 +664,47 @@ main {
 }
 
 .ContainerCandel_1 p {
-            text-align: left;
-        }
+    text-align: left;
+}
 
-        .ContainerCandel_1 button {
-            align-self: flex-start;
-        }
+.ContainerCandel_1 button {
+    align-self: flex-start;
+}
 
-        .ContainerCandel_1 a {
-            text-align: left;
-        }
+.ContainerCandel_1 a {
+    text-align: left;
+}
 
-        .ContainerCandel_1 .textBlock {
-            margin-top: 100px;
-            margin-left: 90px;
-        }
+.ContainerCandel_1 .textBlock {
+    margin-top: 100px;
+    margin-left: 90px;
+}
 
-        .ContainerCandel_1 {
-            display: flex;
-            margin-top: 120px;
-            margin-bottom: 120px;
-            justify-content: space-between;
-        }
+.ContainerCandel_1 {
+    display: flex;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    justify-content: space-between;
+}
 
-        .ContainerCandel_1 {
+.ContainerCandel_1 {
 
-                box-sizing: border-box;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            max-width: 1320px;
-            margin: 0 auto;
-            border-top: none;
-            height: 820px;
-                /*margin: 100px 60px;*/
-                display: flex;
-                justify-content: space-between;
-                border: 0.5px solid #9EA0A0;
-                box-sizing: border-box;
-            margin-bottom: 60px;
-                border-radius: 20px;
-                padding: 120px 60px;
-            }
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-width: 1320px;
+    margin: 0 auto;
+    border-top: none;
+    height: 820px;
+    /*margin: 100px 60px;*/
+    display: flex;
+    justify-content: space-between;
+    border: 0.5px solid #9EA0A0;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+    border-radius: 20px;
+    padding: 120px 60px;
+}
 
 main {
     margin-bottom: 60px;
@@ -772,7 +778,6 @@ main {
 }
 
 
-
 .arrow {
     position: absolute;
     width: 107px;
@@ -837,8 +842,6 @@ main {
 }
 
 
-
-
 /*.main_img::after {*/
 /*    content: "";*/
 /*    position: absolute;*/
@@ -851,18 +854,17 @@ main {
 /*}*/
 
 
-
-.greyLine{
+.greyLine {
     border: 0.5px solid #9EA0A0;
 }
 
-.registrHeader{
+.registrHeader {
     padding: 13px 83px 27px 59px;
     display: flex;
-justify-content: space-between;
+    justify-content: space-between;
 }
 
-.registrHeader p{
+.registrHeader p {
     font-family: Cormorant;
     font-style: normal;
     font-weight: normal;
@@ -875,26 +877,26 @@ justify-content: space-between;
     color: #9EA0A0;
 }
 
-.registrHeader span{
+.registrHeader span {
     font-family: Cormorant;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 29px;
-/* identical to box height */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
 
 
-color: #9EA0A0;
+    color: #9EA0A0;
 }
 
-.registrForm{
+.registrForm {
     width: 282px;
-    margin-top: 142px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.registrForm h1{
+.registrForm h1 {
     font-family: Cormorant;
     font-style: italic;
     font-weight: bold;
@@ -904,79 +906,78 @@ color: #9EA0A0;
     color: #9EA0A0;
 }
 
-.registrForm h2{
+.registrForm h2 {
     font-family: Cormorant;
-font-style: normal;
-font-weight: bold;
-font-size: 36px;
-line-height: 44px;
-/* identical to box height */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
 
 
-color: #9EA0A0;
+    color: #9EA0A0;
 }
 
-.registrForm input.aaaaaaa{
+.registrForm input.aaaaaaa {
     border: 0.5px solid #D78F43;
-box-sizing: border-box;
-border-radius: 3px;
-background-color: rgba(215, 143, 67, 0);
-height: 33px;
-margin: 30px 0;
-padding-left: 12px;
-font-family: Jost;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 26px;
-display: flex;
-align-items: center;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: rgba(215, 143, 67, 0);
+    height: 33px;
+    margin: 30px 0;
+    padding-left: 12px;
+    font-family: Jost;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
 
-color: #9EA0A0;
+    color: #9EA0A0;
 }
 
-.registrForm div{
+.registrForm div {
     display: flex;
     justify-content: space-between;
 }
 
-.registrForm div input.aaaaaaa{
+.registrForm div input.aaaaaaa {
     margin: 0;
 }
 
-.buttonRegistr{
+.buttonRegistr {
     margin-right: -66px;
     cursor: pointer;
 }
 
-.backButton{
+.backButton {
     position: absolute;
     margin-left: 4.5%;
     top: 178px;
     cursor: pointer;
 }
 
-.backButton span{
+.backButton span {
     font-family: Cormorant;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-margin-left: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    margin-left: 15px;
 
-color: #9EA0A0;
+    color: #9EA0A0;
 }
 
 
-
-.formSignIn{
+.formSignIn {
     height: 65vh;
-        width: 272px;
-        margin-top: 140px;
+    width: 272px;
+    margin-top: 19px;
 }
 
-.formSignIn p{
+.formSignIn p {
     font-family: Jost;
     font-style: normal;
     font-weight: 500;
@@ -989,66 +990,66 @@ color: #9EA0A0;
     color: #9EA0A0;
 }
 
-.formSignIn input.aaaaaaa{
+.formSignIn input.aaaaaaa {
     width: 100%;
-height: 40px;
-color: white;
-border: 0.5px solid #D78F43;
-box-sizing: border-box;
-border-radius: 3px;
-background-color: rgba(215, 143, 67, 0);
-padding-left: 40px;
+    height: 40px;
+    color: white;
+    border: 0.5px solid #D78F43;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: rgba(215, 143, 67, 0);
+    padding-left: 40px;
 }
 
 
-.buttonSingIn{
+.buttonSingIn {
     background: linear-gradient(268.87deg, rgba(215, 143, 67, 0.68) 0%, rgba(215, 143, 67, 0) 100.94%);
     border-radius: 3px;
-width: 100%;
-border: 0;
+    width: 100%;
+    border: 0;
     font-family: Open Sans;
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 25px;
-margin-bottom: 15px;
-color: #9EA0A0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    color: #9EA0A0;
 }
 
-.buttonSingIn:hover{
+.buttonSingIn:hover {
     background: linear-gradient(268.87deg, rgba(215, 143, 67, 0.68) 0%, rgba(215, 143, 67, 0) 100.94%);
-border-radius: 3px;
+    border-radius: 3px;
     filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.6));
 }
 
-.formSignIn h1{
+.formSignIn h1 {
     font-family: Cormorant;
-font-style: italic;
-font-weight: bold;
-font-size: 48px;
-line-height: 58px;
-display: flex;
-align-items: center;
-justify-content: center;
-top: 160px;
-color: #9EA0A0;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 160px;
+    color: #9EA0A0;
 }
 
-.formSignIn a{
+.formSignIn a {
     font-family: Jost;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 20px;
-display: flex;
-align-items: center;
-text-decoration-line: underline;
-justify-content: center;
-color: #9EA0A0;
-cursor: pointer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+    justify-content: center;
+    color: #9EA0A0;
+    cursor: pointer;
 }
 
-.aBox{
+.aBox {
     display: flex;
     justify-content: space-between;
     font-family: Jost;
@@ -1074,7 +1075,7 @@ label {
 /* Checkboxes */
 .aBox input.aaaaaaa[type=checkbox] + label {
     border: 1px solid #AFB1B1;
-box-sizing: border-box;
+    box-sizing: border-box;
     width: 14px;
     height: 14px;
     line-height: 0.25em;
