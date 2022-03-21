@@ -23,9 +23,9 @@
             <div class="header_wrapper">
                 <div class="header_container">
                     <div class="header_logo"><h2>Sphere</h2></div>
-                        <button class="header_button" onclick="window.location='/profile/';">Профиль</button>
-                    </div>
+                    <button class="header_button" onclick="window.location='/profile/';">Профиль</button>
                 </div>
+            </div>
         </header>
         <main>
             <div class="main_wrapper">
@@ -41,21 +41,15 @@
                 </div>
             </div>
         </main>
-
         {% for prod in product %}
-
-
-
         <section class="ContainerCandel_1">
             <div class="textBlock" style="width: 293px;"><a>{{prod.flavor}}</a>
                 <p><span>Состав:</span> {{prod.structure}}</p>
                 <p><span>Объем:</span> {{prod.volume}} мл</p>
                 <p><span>Цена: {{prod.price}} BYN</span></p></p>
                 <form action="" method="post">{% csrf_token %}
-                    <button class="btn btn-primary" name="{{prod.id}}" value="{{prod.price}}"> Купить </button>
-
-                    </form>
-<!--                <a class="btn btn-primary" data-value="{{prod.id}}" href="">Купить</a>-->
+                    <button class="btn btn-primary" name="{{prod.id}}" value="{{prod.price}}"> Купить</button>
+                </form>
             </div>
             <div class="ContainerPictureCandle">
                 <div class="Sqare"><img src="{{prod.img.url }}" width="450" height="450" style="margin: 40px 40px;">
@@ -63,67 +57,55 @@
             </div>
         </section>
         {% endfor %}
-
-
-
-
-
-
-
         {% else %}
         <div id="root">
-    <div class="App">
-        <header>
-            <div class="header_wrapper">
-                <div class="header_container">
-                    <div class="header_logo"><h2>Sphere</h2></div>
-                    <a href="/login/">
-                        <button class="header_button">Вход</button>
-                    </a></div>
-            </div>
-        </header>
-        <main>
-            <div class="main_wrapper">
-                <div class="main_container">
-                    <div class="main_img"></div>
-                    <div class="main_layer"><h1>Sphere</h1>
-                        <p>Экологичные свечи с необычными ароматами для твоего интерьера</p>
-                        <div class="main_customize"><p>Кастомизировать</p>
-                            <div class="arrow"></div>
-                            <div class="range" onclick="window.location='/login/';"></div>
+            <div class="App">
+                <header>
+                    <div class="header_wrapper">
+                        <div class="header_container">
+                            <div class="header_logo"><h2>Sphere</h2></div>
+                            <a href="/login/">
+                                <button class="header_button">Вход</button>
+                            </a></div>
+                    </div>
+                </header>
+                <main>
+                    <div class="main_wrapper">
+                        <div class="main_container">
+                            <div class="main_img"></div>
+                            <div class="main_layer"><h1>Sphere</h1>
+                                <p>Экологичные свечи с необычными ароматами для твоего интерьера</p>
+                                <div class="main_customize"><p>Кастомизировать</p>
+                                    <div class="arrow"></div>
+                                    <div class="range" onclick="window.location='/login/';"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </main>
+                {% for prod in product %}
+                <section class="ContainerCandel_1">
+                    <div class="textBlock" style="width: 293px;"><a>{{prod.flavor}}</a>
+                        <p><span>Состав:</span> {{prod.structure}}</p>
+                        <p><span>Объем:</span> {{prod.volume}} мл</p>
+                        <p><span>Цена: {{prod.price}} BYN</span></p></p>
+                        <button class="btn btn-primary" onclick="window.location='/login/'"> Купить</button>
+                    </div>
+                    <div class="ContainerPictureCandle">
+                        <div class="Sqare"><img src="{{prod.img.url }}" width="450" height="450"
+                                                style="margin: 40px 40px;">
+                        </div>
+                    </div>
+                </section>
+                {% endfor %}
+                {% endif %}
+                <footer>
+                    <div style="margin-right: 28px;"><span class="GetCloserTo">Get closer to</span>
+                        <p class="FollowOurInstagram">Follow our Instagram</p></div>
+                    <div><span class="Sphere">Sphere</span>
+                        <p class="candle" style="text-align: end;">candle</p></div>
+                </footer>
             </div>
-        </main>
-
-        {% for prod in product %}
-
-        <section class="ContainerCandel_1">
-
-
-            <div class="textBlock" style="width: 293px;"><a>{{prod.flavor}}</a>
-                <p><span>Состав:</span> {{prod.structure}}</p>
-                <p><span>Объем:</span> {{prod.volume}} мл</p>
-                <p><span>Цена: {{prod.price}} BYN</span></p></p>
-                    <button class="btn btn-primary" onclick="window.location='/login/'"> Купить </button>
-            </div>
-            <div class="ContainerPictureCandle">
-                <div class="Sqare"><img src="{{prod.img.url }}" width="450" height="450" style="margin: 40px 40px;">
-                </div>
-            </div>
-        </section>
-        {% endfor %}
-        {% endif %}
-
-
-        <footer>
-            <div style="margin-right: 28px;"><span class="GetCloserTo">Get closer to</span>
-                <p class="FollowOurInstagram">Follow our Instagram</p></div>
-            <div><span class="Sphere">Sphere</span>
-                <p class="candle" style="text-align: end;">candle</p></div>
-        </footer>
-    </div>
-</div>
+        </div>
 </body>
 </html>

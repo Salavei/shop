@@ -1654,7 +1654,7 @@ label {
 
 
 .apply {
-position: absolute;
+    position: absolute;
     width: 149px;
     height: 26px;
     right: 516px;
@@ -1666,9 +1666,10 @@ position: absolute;
     line-height: 26px;
     color: rgb(158, 160, 160);
 }
+
 .applyArrow {
     background-image: url("Arrow2.svg");
-position: absolute;
+    position: absolute;
     width: 101px;
     height: 0px;
     right: 469px;
@@ -1678,13 +1679,15 @@ position: absolute;
 }
 
 .applyEllipse {
-    background: url("Ellipse8.svg") no-repeat;
+    /*background: url("Ellipse8.svg") no-repeat;*/
     position: absolute;
     width: 129px;
     height: 60px;
-    right: 377px;
+    right: 405px;
     top: 645px;
-    box-sizing: border-box;
+    /*border-width: 0px;*/
+    border: none;
+    /*box-sizing: border-box;*/
     cursor: pointer;
 }
 
@@ -1742,5 +1745,458 @@ position: absolute;
     line-height: 58px;
     display: flex;
     align-items: center;
+    color: #9EA0A0;
+}
+
+
+.frame21:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+.frame22:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+.frame23:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+
+.frame24:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+
+.frame25:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+
+.frame26:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+.frame27:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+
+.frame28:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+
+.frame29:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+
+.frame30:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+.frame31:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+.frame32:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6)
+}
+
+
+.profileordering {
+    position: absolute;
+    /*width: 54px;*/
+    height: 29px;
+    left: 380px;
+    top: 198px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #9EA0A0;
+}
+
+
+.profileorderingheader {
+    position: absolute;
+    /*width: 54px;*/
+    height: 29px;
+    left: 313px;
+    top: 158px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #9EA0A0;
+}
+
+.USER {
+    position: absolute;
+    height: 29px;
+
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    left: 1208px;
+    top: 37px;
+}
+
+.profileaddres {
+    position: absolute;
+    /*width: 54px;*/
+    height: 29px;
+    left: 380px;
+    top: 218px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #9EA0A0;
+}
+
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+#checkbox1:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 883.5px;
+    top: 246px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+#checkbox11:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 973.5px;
+    top: 246px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+#checkbox2:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 883.5px;
+    top: 336px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+#checkbox21:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 973.5px;
+    top: 336px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+#checkbox22:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 1063.5px;
+    top: 336px;
+
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+#checkbox3:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 883.5px;
+    top: 426px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+#checkbox31:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 978.5px;
+    top: 426px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+#checkbox4:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 883.5px;
+    top: 516px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+#checkbox41:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 977.5px;
+    top: 517px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+#checkbox42:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 1071.5px;
+    top: 518px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+#checkbox43:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 1165.5px;
+    top: 519px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+#checkbox44:checked {
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 1259.5px;
+    top: 520px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+
+}
+
+
+.addresAdd h1 {
+    position: absolute;
+    height: 29px;
+    left: 1151px;
+    top: 506px;
+    font-family: Cormorant;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: rgb(158, 160, 160);
+}
+
+.addresAddapply {
+    position: absolute;
+    width: 149px;
+    height: 26px;
+    right: 143px;
+    top: 651px;
+    font-family: Jost;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgb(158, 160, 160);
+}
+
+.addresapplyArrow {
+    background-image: url(Arrow2.svg);
+    position: absolute;
+    width: 101px;
+    height: 0px;
+    z-index: 400;
+    right: 163px;
+    top: 675px;
+    border: 1px solid rgb(86, 89, 89);
+    box-sizing: border-box;
+}
+
+.addresapplyEllipse {
+    /* background: url(Ellipse8.svg) no-repeat; */
+    position: absolute;
+    width: 129px;
+    height: 60px;
+    right: 100px;
+    top: 645px;
+    /* border-width: 0px; */
+    border: none;
+    /* box-sizing: border-box; */
+    cursor: pointer;
+}
+
+#wdwdw {
+    border: 0.5px solid rgb(215, 143, 67);
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: rgba(215, 143, 67, 0);
+    height: 33px;
+    position: absolute;
+    width: 305px;
+    right: 139px;
+    top: 568px;
+    color: white;
+    padding-left: 15px;
+
+}
+
+
+input#wdwdw[type=checkbox]:checked + label::after {
+    content: "\2716";
+}
+
+
+input#wdwdw[type=checkbox] + label {
+    border: 1px solid #AFB1B1;
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    line-height: 0.25em;
+    padding-top: 4.5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.standartbuyprofileordering {
+    position: absolute;
+    /*width: 54px;*/
+    height: 29px;
+    left: 380px;
+    top: 483px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #9EA0A0;
+}
+
+
+.standartbuyprofileorderingheader {
+    position: absolute;
+    /*width: 54px;*/
+    height: 29px;
+    left: 313px;
+    top: 453px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #9EA0A0;
+}
+
+
+.standartbuyprofileaddres {
+    position: absolute;
+    /*width: 54px;*/
+    height: 29px;
+    left: 380px;
+    top: 503px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
     color: #9EA0A0;
 }

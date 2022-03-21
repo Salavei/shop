@@ -16,55 +16,42 @@
 <div id="root">
     <div class="App">
         <div class="borderContainer">
-            <a href="/login">
-            <div class="backButton"><img
-                    src="{% static 'left.svg' %}"><span>назад</span>
-            </div>
-        </a>
             <header class="registrHeader">
                 <div><span>Sphere</span>
                     <p>candle</p>
                 </div>
                 <img src="{% static 'peaple.svg' %}"></header>
             <div class="greyLine"></div>
-
-
-            <form class="registrForm"  action="." method="post" >{% csrf_token %}<h1>Регистрация</h1>
+            <div class="header_container"></div>
+            <form class="registrForm" action="." method="post">{% csrf_token %}<h1>Регистрация</h1>
                 <div>
                     <input class="aaaaaaa" placeholder="Username" name="username" value="">
-
                 </div>
                 <input class="aaaaaaa" name="phone" placeholder="Телефон" value>
-                <input class="aaaaaaa" type="email"  name="email" class="eemail" value placeholder="Email">
+                <input class="aaaaaaa" type="email" name="email" class="eemail" value placeholder="Email">
                 <input class="aaaaaaa" type="password" name="password1" class="password" value placeholder="Пароль">
-
-
-                    <span class="ain_customize"
-                        style="align-self: center; margin-right: 30px;">Зарегистрироваться</span>
-
+                <span class="ain_customize"
+                      style="align-self: center; margin-right: 30px;">Зарегистрироваться</span>
                 <img class="ange"
-                        src="{% static 'right.svg' %}" style="margin-right: -30px;">
-                <input type="image" name="submit" src="{% static 'circle.svg' %}"  border='0' alt="Submit" class="rrow"/>
-
+                     src="{% static 'right.svg' %}" style="margin-right: -30px;">
+                <input type="image" name="submit" src="{% static 'circle.svg' %}" border='0' alt="Submit" class="rrow"/>
                 {% for message in messages %}
                 <a id="messages">{{ message }}</a>
                 {% endfor %}
-
-        </form>
-
-
-
-
-
+            </form>
+            <a href="/login">
+                <div class="backButton"><img
+                        src="{% static 'left.svg' %}"><span>назад</span>
+                </div>
+            </a>
+        </div>
+        <footer>
+            <div style="margin-right: 28px;"><span class="GetCloserTo">Get closer to</span>
+                <p class="FollowOurInstagram">Follow our Instagram</p></div>
+            <div><span class="Sphere">Sphere</span>
+                <p class="candle" style="text-align: end;">candle</p></div>
+        </footer>
     </div>
-    <footer>
-        <div style="margin-right: 28px;"><span class="GetCloserTo">Get closer to</span>
-            <p class="FollowOurInstagram">Follow our Instagram</p></div>
-        <div><span class="Sphere">Sphere</span>
-            <p class="candle" style="text-align: end;">candle</p></div>
-    </footer>
 </div>
-</div>
-
 </body>
 </html>

@@ -12,62 +12,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&amp;display=swap" rel="stylesheet">
     <title>Log in</title>
 </head>
-
 <body>
 <div id="root">
-     <div class="App">
-        <div class="borderContainer"><a href="/">
-            <div class="backButton"><img
-                    src="{% static 'left.svg' %}"><span>назад</span>
-            </div>
-        </a>
+    <div class="App">
+        <div class="borderContainer">
             <header class="registrHeader">
                 <div><span>Sphere</span>
                     <p>candle</p>
                 </div>
                 <img src="{% static 'peaple.svg' %}"></header>
             <div class="greyLine"></div>
-         <div style="text-align: -webkit-center;">
-        <form class='formSignIn'  action="." method="post">{% csrf_token %}
-            <h1>Вход</h1>
-            <p>username</p>
-            <input  class="email" name="username" value>
-            <p>Пароль</p>
-            <input type="password" class="password" name="password" value>
-            <div class="aBox">
-                <input type="checkbox" id="checkboxInput">
-                <label for="checkboxInput"></label>
-                <a>Запомнить меня</a>
-                <a>Я забыл(а) пароль</a>
-
+            <div class="header_container"></div>
+            <div style="text-align: -webkit-center;">
+                <form class='formSignIn' action="." method="post">{% csrf_token %}
+                    <h1>Вход</h1>
+                    <p>username</p>
+                    <input class="email" name="username" value>
+                    <p>Пароль</p>
+                    <input type="password" class="password" name="password" value>
+                    <div class="aBox">
+                        <input type="checkbox" id="checkboxInput">
+                        <label for="checkboxInput"></label>
+                        <a>Запомнить меня</a>
+                        <a>Я забыл(а) пароль</a>
+                    </div>
+                    <button class="buttonSingIn"> Войти</button>
+                    <a class="btn btn-primary" href="../register/">Регистрация</a>
+                    {% for message in messages %}
+                    <a id="messages">{{ message }}</a>
+                    {% endfor %}
+                </form>
+                <a href="/">
+                    <div class="backButton"><img
+                            src="{% static 'left.svg' %}"><span>назад</span>
+                    </div>
+                </a>
             </div>
-
-
-
-                <button class="buttonSingIn" > Войти </button>
-
-
-
-
-
-            <a class="btn btn-primary" href="../register/">Регистрация</a>
-            {% for message in messages %}
-                <a id="messages">{{ message }}</a>
-                {% endfor %}
-        </form>
-
-
- </div>
-            </div>
-    <footer>
-        <div style="margin-right: 28px;"><span class="GetCloserTo">Get closer to</span>
-            <p class="FollowOurInstagram">Follow our Instagram</p></div>
-        <div><span class="Sphere">Sphere</span>
-            <p class="candle" style="text-align: end;">candle</p></div>
-    </footer>
-
+        </div>
+        <footer>
+            <div style="margin-right: 28px;"><span class="GetCloserTo">Get closer to</span>
+                <p class="FollowOurInstagram">Follow our Instagram</p></div>
+            <div><span class="Sphere">Sphere</span>
+                <p class="candle" style="text-align: end;">candle</p></div>
+        </footer>
+    </div>
 </div>
-</div>
-
 </body>
 </html>
