@@ -1548,12 +1548,25 @@ label {
     align-items: center;
     color: #9EA0A0;
 }
-
+.profileorderingheader1  {
+    position: absolute;
+    height: 29px;
+    left: 201px;
+    top: 332px;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #9EA0A0;
+}
 .profileorderingheader {
     position: absolute;
     height: 29px;
-    left: 313px;
-    top: 158px;
+    left: 201px;
+    top: 128px;
     font-family: 'Cormorant';
     font-style: normal;
     font-weight: 700;
@@ -1745,8 +1758,8 @@ input[type="checkbox"] {
     position: absolute;
     height: 29px;
     font-family: 'Cormorant';
-    left: 1151px;
-    top: 506px;
+    left: 340px;
+    top: 647px;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -1799,9 +1812,9 @@ input[type="checkbox"] {
     background-color: rgba(215, 143, 67, 0);
     height: 33px;
     position: absolute;
-    width: 305px;
-    right: 139px;
-    top: 568px;
+    width: 320px;
+    right: 324px;
+    top: 658px;
     color: white;
     padding-left: 15px;
 }
@@ -1871,9 +1884,9 @@ input#wdwdw[type=checkbox] + label {
     position: absolute;
     height: 29px;
     color: #a03333;
-    left: 1254px;
+    left: 1144px;
     font-family: 'Cormorant';
-    top: 453px;
+    top: 555px;
     font-style: normal;
     font-weight: 700;
     font-size: 21px;
@@ -1896,3 +1909,110 @@ input#wdwdw[type=checkbox] + label {
     display: flex;
     align-items: center;
 }
+
+
+    .Containercastombuy p {
+            text-align: left;
+        }
+
+        .Containercastombuy button {
+            align-self: flex-start;
+        }
+
+        .Containercastombuy a {
+            text-align: left;
+        }
+
+        .Containercastombuy .castombuytextBlock {
+            margin-top: 14px;
+            margin-left: 20px;
+            font-size: 12px;
+
+        }
+
+        .Containercastombuy1 p {
+            text-align: left;
+        }
+
+        .Containercastombuy1 button {
+            align-self: flex-start;
+        }
+
+        .Containercastombuy1 a {
+            text-align: left;
+        }
+
+        .Containercastombuy1 .castombuytextBlock1 {
+            margin-top: 14px;
+            margin-left: -2px;
+            font-size: 12px;
+        }
+
+        .syka {
+            max-height: 164px;
+            padding: -54px;
+            margin-left: 129px;
+            margin-top: 38px;
+            background-color: #121719;
+            border-radius: 15px;
+            overflow: scroll;
+            max-width: 1285px;
+
+        }
+
+        .syka1 {
+            max-height: 164px;
+            padding: -54px;
+            margin-left: 129px;
+            margin-top: 38px;
+            background-color: #121719;
+            border-radius: 15px;
+            overflow: scroll;
+            max-width: 1285px;
+
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .syka::-webkit-scrollbar-thumb {
+            background-color: #D78F43;
+            border-radius: 20px;
+            border: 6px solid transparent;
+            /*background-clip: content-box;*/
+        }
+        .syka1::-webkit-scrollbar-thumb {
+            background-color: #D78F43;
+            border-radius: 20px;
+            border: 6px solid transparent;
+            /*background-clip: content-box;*/
+        }
+
+        .standartbuy {
+
+            font-size: 12px;
+
+            width: 1254px;
+            height: 53px;
+            y-content: space-between;
+            border: 0.5px solid #9EA0A0;
+            box-sizing: border-box;
+            margin: 7px;
+            margin-bottom: 10px;
+            margin-left: 4px;
+            border-radius: 18px;
+        }
+
+        .Containercastombuy {
+
+            width: 1254px;
+            height: 53px;
+            y-content: space-between;
+            border: 0.5px solid #9EA0A0;
+            box-sizing: border-box;
+            margin: 7px;
+            margin-bottom: 10px;
+            margin-left: 4px;
+            border-radius: 18px;
+        }
