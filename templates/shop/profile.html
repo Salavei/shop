@@ -32,13 +32,17 @@
             </div>
             <div class="castombuy">
                 <span class="profileorderingheader">Ваши заказы на кастомные свечи:</span>
-                <span class="profileordering">Заказ - тип ( {{ orders.candle_t}} ), цвет ( {{ orders.candle_color}} ), объем мл ( {{ orders.candle_volume}} ), аромат ( {{ orders.candle_flavor}} ), цена ( {{ orders.price}} )  СТАТУС - {{ orders.status }} </span>
-                <span class="profileaddres">Адрес  доставки {{ orders.address}}</span>
+                {% for order in orders %}
+                <span class="profileordering">Заказ - тип "{{ order.candle_t}}", цвет "{{ order.candle_color}}", объем мл "{{ order.candle_volume}}", аромат "{{ order.candle_flavor}}", цена BYN "35.00".  СТАТУС - {{ order.status }} </span>
+                <span class="profileaddres">Адрес доставки - {{ order.address}}</span>
+                {% endfor %}
             </div>
             <div class="standartbuy">
                 <span class="standartbuyprofileorderingheader">Ваши заказы на обычные свечи:</span>
-                <span class="standartbuyprofileordering">Заказ - объем мл ( {{ Buy.volume}} ), аромат ( {{ Buy.flavor}} ), цена ( {{ Buy.price}} ) СТАТУС - {{ Buy.status }} </span>
-                <span class="standartbuyprofileaddres">Адрес  доставки {{ Buy.address}}</span>
+                {% for buy in Buy %}
+                <span class="standartbuyprofileordering">Заказ - объем мл "{{ buy.volume}}", аромат "{{ buy.flavor}}", цена BYN "{{ buy.price}}". СТАТУС - {{ buy.status }} </span>
+                <span class="standartbuyprofileaddres">Адрес доставки - {{ buy.address}}</span>
+                {% endfor %}
             </div>
             <form class="addresAdd" action="" method="post">{% csrf_token %}
                 <h1>Ваш адрес: {{ address }}</h1>
@@ -48,7 +52,7 @@
                 <input class="addresapplyEllipse" type="image" name="submit" src="{% static 'circle.svg' %}"
                        alt="Submit">
                 {% for message in messages %}
-                <a id="messages">{{ message }}</a>
+                <div class="messagesINfo"><p >{{ message }}</p></div>
                 {% endfor %}
             </form>
         </div>

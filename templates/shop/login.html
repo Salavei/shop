@@ -28,7 +28,7 @@
                     <h1>Вход</h1>
                     <p>username</p>
                     <input class="email" name="username" value>
-                    <p>Пароль</p>
+                    <p>password</p>
                     <input type="password" class="password" name="password" value>
                     <div class="aBox">
                         <input type="checkbox" id="checkboxInput">
@@ -39,7 +39,7 @@
                     <button class="buttonSingIn"> Войти</button>
                     <a class="btn btn-primary" href="../register/">Регистрация</a>
                     {% for message in messages %}
-                    <a id="messages">{{ message }}</a>
+                    <div class="messagesUserNotSuccsess">{{ message }}</div>
                     {% endfor %}
                 </form>
                 <a href="/">

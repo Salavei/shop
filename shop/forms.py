@@ -1,5 +1,6 @@
 from django import forms
-from .models import Order, UUser
+from .models import UUser
+from .models import TYPE_CHOICES, COLOR_CHOICES, FLAVOR_CHOICES, VOLUME_CHOICES
 from django.contrib.auth.forms import UserCreationForm
 
 
@@ -17,28 +18,6 @@ class CreateUserForm(UserCreationForm):
         del self.fields['password2']
         self.fields['password1'].help_text = None
         self.fields['username'].help_text = None
-
-
-TYPE_CHOICES = (
-    ('фигура', 'фигура'),
-    ('стандартная', 'стандартная'),
-)
-COLOR_CHOICES = (
-    ('белый', 'белый'),
-    ('желтый', 'желтый'),
-    ('черный', 'черный'),
-)
-FLAVOR_CHOICES = (
-    ('яблочный пирог', 'яблочный пирог'),
-    ('черный кокос', 'черный кокос'),
-    ('вечер у камина', 'вечер у камина'),
-    ('ягодный пунш', 'ягодный пунш'),
-    ('сумеречный лес', 'сумеречный лес'),
-)
-VOLUME_CHOICES = (
-    (200, 200),
-    (100, 100),
-)
 
 
 class OrderForm(forms.Form):
