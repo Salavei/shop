@@ -1,18 +1,6 @@
+{% extends 'main.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&amp;display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&amp;display=swap" rel="stylesheet">
-    <title>Castom</title>
-</head>
-<body>
+{% block content %}
 <div id="root">
     <div class="App">
         <div class="borderContainer">
@@ -20,7 +8,7 @@
                 <div><span>Sphere</span>
                     <p>candle</p>
                 </div>
-                <img src="{% static 'peaple.svg' %}">
+                <img src="{% static 'images/peaple.svg' %}">
             </header>
             <div class="greyLine"></div>
             <div class="header_container">
@@ -28,7 +16,7 @@
             </div>
             <a href="/">
                 <div class="backButton"><img
-                        src="{% static 'left.svg' %}"><span>назад</span>
+                        src="{% static 'images/left.svg' %}"><span>назад</span>
                 </div>
             </a>
             <div class="vector26"></div>
@@ -37,72 +25,81 @@
             <div class="ellipse45"></div>
             <div class="ellipse46"></div>
             <div class="vector27"></div>
-            <form class="AAAAA?????" action="" method="post">{% csrf_token %}
+            <form class="not_name" action="" method="post">{% csrf_token %}
                 <div class="typec">Тип свечи</div>
-                <input class="checkbox1" name="candle_t" id="checkbox1" type="checkbox" value="фигура">
+                <input class="checkbox1" name="candle_t" id="checkbox1" type="radio" value="фигура">
                 <label for="checkbox1">
                     <div class="frame21">
                         <div class="vector2"></div>
                     </div>
                 </label>
-                <input name="candle_t" id="checkbox11" type="checkbox" value="стандартная">
+                <input name="candle_t" id="checkbox11" type="radio" value="стандартная">
                 <label for="checkbox11">
                     <div class="frame22">
                         <div class="vector28"></div>
                     </div>
                 </label>
                 <div class="colorc">Цвет</div>
-                <input name="candle_color" id="checkbox2" type="checkbox" value="белый">
+                <input name="candle_color" id="checkbox2" type="radio" value="белый">
                 <label for="checkbox2">
-                    <div class="frame23"></div>
+
+                    <div class="frame23">
+
+                    </div>
                 </label>
-                <input name="candle_color" id="checkbox21" type="checkbox" value="желтый">
+                <input name="candle_color" id="checkbox21" type="radio" value="желтый">
                 <label for="checkbox21">
-                    <div class="frame24"></div>
+                    <div class="frame24">
+
+                    </div>
                 </label>
-                <input name="candle_color" id="checkbox22" type="checkbox" value="черный">
+                <input name="candle_color" id="checkbox22" type="radio" value="черный">
                 <label for="checkbox22">
-                    <div class="frame25"></div>
+                    <div class="frame25">
+
+                    </div>
                 </label>
+
+
                 <div class="volumec">Объем мл</div>
-                <input name="candle_volume" id="checkbox3" type="checkbox" value="200">
+                <input name="candle_volume" id="checkbox3" type="radio" value="200">
                 <label for="checkbox3">
                     <div class="frame26">
                         <div class="v200">200</div>
                     </div>
                 </label>
-                <input name="candle_volume" id="checkbox31" type="checkbox" value="100">
+                <input name="candle_volume" id="checkbox31" type="radio" value="100">
                 <label for="checkbox31">
                     <div class="frame27">
                         <div class="v100">100</div>
                     </div>
                 </label>
                 <div class="flavourc">Запах</div>
-                <input name="candle_flavor" id="checkbox4" type="checkbox" value="яблочный пирог">
+                <input name="candle_flavor" id="checkbox4" type="radio" value="яблочный пирог">
                 <label for="checkbox4">
                     <div class="frame28">
                         <div class="flav1">яблочный пирог</div>
                     </div>
                 </label>
-                <input name="candle_flavor" id="checkbox41" type="checkbox" value="черный кокос">
+                <input name="candle_flavor" id="checkbox41" type="radio" value="черный кокос">
                 <label for="checkbox41">
                     <div class="frame29">
                         <div class="flav2">черный кокос</div>
                     </div>
                 </label>
-                <input name="candle_flavor" id="checkbox42" type="checkbox" value="вечер у камина">
+                <input name="candle_flavor" id="checkbox42" type="radio" value="вечер у камина">
                 <label for="checkbox42">
                     <div class="frame30">
                         <div class="flav3">вечер у камина</div>
                     </div>
                 </label>
-                <input name="candle_flavor" id="checkbox43" type="checkbox" value="ягодный пунш">
+                <input name="candle_flavor" id="checkbox43" type="radio" value="ягодный пунш">
                 <label for="checkbox43">
                     <div class="frame31">
                         <div class="flav4">ягодный пунш</div>
                     </div>
                 </label>
-                <input name="candle_flavor" id="checkbox44" type="checkbox" value="сумеречный лес">
+                <input name="candle_flavor" id="checkbox44" type="radio" value="сумеречный лес">
                 <label for="checkbox44">
                     <div class="frame32">
                         <div class="flav5">сумеречный лес</div>
@@ -114,7 +111,7 @@
                 </div>
                 <div class="apply">Подтвердить заказ</div>
                 <div class="applyArrow"></div>
-                <input class="applyEllipse" type="image" name="submit" src="{% static 'circle.svg' %}" alt="Submit">
+                <input class="applyEllipse" type="image" name="submit" src="{% static 'images/circle.svg' %}" alt="Submit">
             </form>
         </div>
         <footer>
@@ -126,5 +123,4 @@
     </div>
 </div>
 </div>
-</body>
-</html>
+{% endblock content %}

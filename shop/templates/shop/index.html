@@ -1,21 +1,5 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
-    <meta charset="utf-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="theme-color" content="#000000">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&amp;display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&amp;display=swap" rel="stylesheet">
-    <title>Sphere</title>
-</head>
-<body>
+{% extends 'main.html' %}
+{% block content %}
 {% if request.user.is_authenticated %}
 <div id="root">
     <div class="App">
@@ -107,5 +91,6 @@
                 </footer>
             </div>
         </div>
-</body>
-</html>
+    </div>
+</div>
+{% endblock content %}

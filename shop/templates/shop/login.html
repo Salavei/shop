@@ -1,18 +1,6 @@
+{% extends 'main.html' %}
+{% block content %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&amp;display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&amp;display=swap" rel="stylesheet">
-    <title>Log in</title>
-</head>
-<body>
 <div id="root">
     <div class="App">
         <div class="borderContainer">
@@ -20,11 +8,11 @@
                 <div><span>Sphere</span>
                     <p>candle</p>
                 </div>
-                <img src="{% static 'peaple.svg' %}"></header>
+                <img src="{% static 'images/peaple.svg' %}"></header>
             <div class="greyLine"></div>
             <div class="header_container"></div>
             <div style="text-align: -webkit-center;">
-                <form class='formSignIn' action="." method="post">{% csrf_token %}
+                <form class='formSignIn' action="" method="post">{% csrf_token %}
                     <h1>Вход</h1>
                     <p>username</p>
                     <input class="email" name="username" value>
@@ -44,7 +32,7 @@
                 </form>
                 <a href="/">
                     <div class="backButton"><img
-                            src="{% static 'left.svg' %}"><span>назад</span>
+                            src="{% static 'images/left.svg' %}"><span>назад</span>
                     </div>
                 </a>
             </div>
@@ -57,5 +45,4 @@
         </footer>
     </div>
 </div>
-</body>
-</html>
+{% endblock content %}

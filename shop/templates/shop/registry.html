@@ -1,18 +1,6 @@
+{% extends 'main.html' %}
+{% block content %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&amp;display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&amp;display=swap" rel="stylesheet">
-    <title>Register</title>
-</head>
-<body>
 <div id="root">
     <div class="App">
         <div class="borderContainer">
@@ -20,10 +8,10 @@
                 <div><span>Sphere</span>
                     <p>candle</p>
                 </div>
-                <img src="{% static 'peaple.svg' %}"></header>
+                <img src="{% static 'images/peaple.svg' %}"></header>
             <div class="greyLine"></div>
             <div class="header_container"></div>
-            <form class="registrForm" action="." method="post">{% csrf_token %}<h1>Регистрация</h1>
+            <form class="registrForm" action="" method="post">{% csrf_token %}<h1>Регистрация</h1>
                 <div>
                     <input class="aaaaaaa" placeholder="Username" name="username" value="">
                 </div>
@@ -33,15 +21,15 @@
                 <span class="ain_customize"
                       style="align-self: center; margin-right: 30px;">Зарегистрироваться</span>
                 <img class="ange"
-                     src="{% static 'right.svg' %}" style="margin-right: -30px;">
-                <input type="image" name="submit" src="{% static 'circle.svg' %}" border='0' alt="Submit" class="rrow"/>
+                     src="{% static 'images/right.svg' %}" style="margin-right: -30px;">
+                <input type="image" name="submit" src="{% static 'images/circle.svg' %}" border='0' alt="Submit" class="rrow"/>
                 {% for message in messages %}
                 <a id="messages">{{ message }}</a>
                 {% endfor %}
             </form>
             <a href="/login">
                 <div class="backButton"><img
-                        src="{% static 'left.svg' %}"><span>назад</span>
+                        src="{% static 'images/left.svg' %}"><span>назад</span>
                 </div>
             </a>
         </div>
@@ -53,5 +41,4 @@
         </footer>
     </div>
 </div>
-</body>
-</html>
+{% endblock content %}

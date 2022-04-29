@@ -49,11 +49,11 @@ code {
 }
 
 .email {
-    background: url('massage.svg') 8px no-repeat;
+    background: url('../images/massage.svg') 8px no-repeat;
 }
 
 .password {
-    background: url('key.svg') 8px no-repeat;
+    background: url('../images/key.svg') 8px no-repeat;
 }
 
 .buttonSingIn:hover {
@@ -277,7 +277,7 @@ main {
 }
 
 .main_img {
-    background-image: url('Vector1.png');
+    background-image: url('../images/Vector1.png');
     width: 287px;
     height: 624px;
     margin-top: 59px;
@@ -485,7 +485,7 @@ main {
 .explore_img {
     width: 408px;
     height: 380px;
-    background-image: url('{% static ' 21.png ' %}');
+    background-image: url('../images/21.png');
     position: relative;
 }
 
@@ -987,7 +987,7 @@ label {
 }
 
 .vector26 {
-    background-image: url('Vector26.svg');
+    background-image: url('../images/Vector26.svg');
     position: absolute;
     width: 289px;
     height: 195px;
@@ -1002,7 +1002,7 @@ label {
     height: 55px;
     left: 17px;
     top: 3px;
-    background: url('Vector2.svg');
+    background: url('../images/Vector2.svg');
 }
 
 
@@ -1012,11 +1012,11 @@ label {
     height: 47px;
     left: 12px;
     top: 7px;
-    background: url('Vector28.svg');
+    background: url('../images/Vector28.svg');
 }
 
 .ellipse43 {
-    background-image: url('Ellipse43.svg');
+    background-image: url('../images/Ellipse43.svg');
     position: absolute;
     width: 290px;
     height: 67px;
@@ -1026,7 +1026,7 @@ label {
 }
 
 .ellipse44 {
-    background-image: url('Ellipse44.svg');
+    background-image: url('../images/Ellipse44.svg');
     position: absolute;
     width: 262px;
     height: 55px;
@@ -1036,7 +1036,7 @@ label {
 }
 
 .ellipse45 {
-    background-image: url('Ellipse45.svg');
+    background-image: url('../images/Ellipse45.svg');
     position: absolute;
     width: 84px;
     height: 17px;
@@ -1046,7 +1046,7 @@ label {
 }
 
 .ellipse46 {
-    background-image: url('Ellipse46.svg');
+    background-image: url('../images/Ellipse46.svg');
     position: absolute;
     width: 42px;
     height: 7px;
@@ -1056,7 +1056,7 @@ label {
 }
 
 .vector27 {
-    background-image: url('Vector27.svg');
+    background-image: url('../images/Vector27.svg');
     position: absolute;
     width: 89px;
     height: 183px;
@@ -1406,7 +1406,7 @@ label {
 }
 
 .applyArrow {
-    background-image: url("Arrow2.svg");
+    background-image: url("../images/Arrow2.svg");
     position: absolute;
     width: 101px;
     height: 0px;
@@ -1603,7 +1603,7 @@ label {
     color: #9EA0A0;
 }
 
-input[type="checkbox"] {
+input[type="radio"] {
     -webkit-appearance: none;
     appearance: none;
 }
@@ -1633,8 +1633,7 @@ input[type="checkbox"] {
     border: 5px solid rgba(255, 255, 255, 0.6);
 
 }
-
-#checkbox2:checked {
+input[id="checkbox2"]:checked {
     box-sizing: border-box;
     border-radius: 3px;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
@@ -1644,10 +1643,11 @@ input[type="checkbox"] {
     left: 883.5px;
     top: 336px;
     border: 5px solid rgba(255, 255, 255, 0.6);
+
 }
 
-#checkbox21:checked {
-    box-sizing: border-box;
+input[id="checkbox21"]:checked {
+     box-sizing: border-box;
     border-radius: 3px;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
     position: absolute;
@@ -1656,9 +1656,11 @@ input[type="checkbox"] {
     left: 973.5px;
     top: 336px;
     border: 5px solid rgba(255, 255, 255, 0.6);
+
+
 }
 
-#checkbox22:checked {
+input[id="checkbox22"]:checked {
     box-sizing: border-box;
     border-radius: 3px;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
@@ -1669,6 +1671,7 @@ input[type="checkbox"] {
     top: 336px;
     border: 5px solid rgba(255, 255, 255, 0.6);
 }
+
 
 #checkbox3:checked {
     box-sizing: border-box;
@@ -1784,7 +1787,7 @@ input[type="checkbox"] {
 }
 
 .addresapplyArrow {
-    background-image: url(Arrow2.svg);
+    background-image: url("../images/Arrow2.svg");
     position: absolute;
     width: 101px;
     height: 0px;
